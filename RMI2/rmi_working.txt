@@ -1,0 +1,49 @@
+Compile the Java Files:
+
+1.  Open CMD.
+Navigate to the directory where your Java files (RMIServerInterface.java, RMIServer.java, RMIClient.java) are saved using the cd command. 
+For example:
+
+--cd path\to\your\directory
+
+Compile the Java files using the javac command:
+
+--javac RMIServerInterface.java RMIServer.java RMIClient.java
+
+
+Start the RMI Registry:
+In the same CMD window, start the RMI registry using the rmiregistry command:
+
+
+--rmiregistry
+
+Leave this CMD window open. The registry will continue to run until you close this window.
+
+Run the RMI Server:
+
+Open a new CMD window.
+
+Navigate to the directory where your compiled server class file (RMIServer.class) is located.
+Run the server using the java command:
+
+--java RMIServer
+
+This command will start the RMI server and bind it to the RMI registry.
+
+Run the RMI Client:
+
+Open another new CMD window.
+
+Navigate to the directory where your compiled client class file (RMIClient.class) is located.
+
+Run the client using the java command:
+
+--java RMIClient
+This command will execute the RMI client, which will connect to the RMI server, invoke a method, and print the response.
+
+Observe Output:
+You should see output indicating that the server has started successfully in the window where you started the server.
+
+In the window where you ran the client, you should see the message received from the server printed to the console.
+Close the Applications:
+Once you're done testing, you can close all CMD windows to terminate the RMI registry, server, and client.
